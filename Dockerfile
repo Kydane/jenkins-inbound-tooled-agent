@@ -6,14 +6,17 @@ COPY install-maven.sh /usr/local/bin/install-maven.sh
 COPY install-docker-cli.sh /usr/local/bin/install-docker-cli.sh
 COPY install-jfrog-cli.sh /usr/local/bin/install-jfrog-cli.sh
 COPY install-argo-cli.sh /usr/local/bin/install-argo-cli.sh
+COPY install-podman.sh /usr/local/bin/install-podman.sh
 RUN chmod +x /usr/local/bin/install-maven.sh \
  && chmod +x /usr/local/bin/install-docker-cli.sh \
  && chmod +x /usr/local/bin/install-jfrog-cli.sh \
  && chmod +x /usr/local/bin/install-argo-cli.sh \
+ && chmod +x /usr/local/bin/install-podman.sh \
  && /usr/local/bin/install-maven.sh \
  && /usr/local/bin/install-docker-cli.sh \
  && /usr/local/bin/install-jfrog-cli.sh \
  && /usr/local/bin/install-argo-cli.sh \
+ && /usr/local/bin/install-podman.sh \
  && chown -R jenkins:jenkins /home/jenkins/tools
 
 USER jenkins
