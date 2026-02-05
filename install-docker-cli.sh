@@ -13,7 +13,7 @@ apt-get install -y \
   ca-certificates \
   curl \
   gnupg \
-  lsb-release
+  lsb-release zip unzip
 
 echo "Setting up Docker GPG key..."
 install -m 0755 -d /etc/apt/keyrings
